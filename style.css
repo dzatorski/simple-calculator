@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  font-size: 20px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  margin-top: 100px;
+}
+.screen {
+  height: 40px;
+  width: 320px;
+  border: 1px solid red;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  height: 34 0px;
+  width: 320px;
+}
+.numbers {
+  width: 240px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.operators {
+  width: 80px;
+}
+.body {
+  display: flex;
+}
+.number {
+  height: 100px;
+  width: 80px;
+}
+.operator {
+  height: 60px;
+  width: 80px;
+}
