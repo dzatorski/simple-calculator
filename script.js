@@ -16,11 +16,15 @@ const number6 = document.querySelector(`#num6`);
 const number7 = document.querySelector(`#num7`);
 const number8 = document.querySelector(`#num8`);
 const number9 = document.querySelector(`#num9`);
+const number0 = document.querySelector(`#num0`);
+const dotOperator = document.querySelector(`#numDot`);
 const sumButton = document.querySelector(`#operator-plus`);
 const minButton = document.querySelector(`#operator-minus`);
 const divButton = document.querySelector(`#operator-division`);
 const mulButton = document.querySelector(`#operator-multiplication`);
 const equalButton = document.querySelector(`#operator-equal`);
+const backButton = document.querySelector(`#operator-back`);
+const resetButton = document.querySelector(`#operator-reset`);
 
 const refreshScreen = () => {
   screen.textContent = displayValue;
@@ -82,10 +86,43 @@ number9.addEventListener(`click`, () => {
   refreshScreen();
   return displayValue;
 });
+number0.addEventListener(`click`, () => {
+  if (displayValue !== `` || displayValue !== 0) {
+    displayValue = displayValue + `0`;
+    refreshScreen();
+    return displayValue;
+  } else return displayValue;
+});
+
+dotOperator.addEventListener(`click`, () => {
+  if (displayValue !== ``) {
+    displayValue = displayValue + `.`;
+    refreshScreen();
+    return displayValue;
+  } else return displayValue;
+});
 
 sumButton.addEventListener(`click`, () => {
   firstValue = Number(displayValue);
   operator = `plus`;
+  displayValue = ``;
+  refreshScreen();
+});
+minButton.addEventListener(`click`, () => {
+  firstValue = Number(displayValue);
+  operator = `minus`;
+  displayValue = ``;
+  refreshScreen();
+});
+mulButton.addEventListener(`click`, () => {
+  firstValue = Number(displayValue);
+  operator = `multiplication`;
+  displayValue = ``;
+  refreshScreen();
+});
+divButton.addEventListener(`click`, () => {
+  firstValue = Number(displayValue);
+  operator = `division`;
   displayValue = ``;
   refreshScreen();
 });
@@ -96,4 +133,17 @@ equalButton.addEventListener(`click`, () => {
   displayValue = sum;
   refreshScreen();
   return sum;
+});
+
+resetButton.addEventListener(`click`, () => {
+  firstValue = ``;
+  secondValue = ``;
+  displayValue = ``;
+  refreshScreen();
+});
+
+backButton.addEventListener(`click`, () => {
+  let cut = displayValue.slice(0, -1);
+  displayValue = cut;
+  refreshScreen();
 });

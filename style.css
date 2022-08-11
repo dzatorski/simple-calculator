@@ -16,31 +16,39 @@
   display: flex;
   font-size: 30px;
   height: 40px;
-  width: 320px;
-  border: 1px solid red;
+  width: 317px;
+  border: 1px solid white;
   justify-content: end;
   align-items: center;
+  color: black;
+  padding: 10px;
 }
 .calculator {
   display: flex;
+  background: grey;
+  padding: 20px;
   flex-direction: column;
-  height: 34 0px;
-  width: 320px;
+  width: 345px;
+  border-radius: 10px;
+  gap: 10px;
 }
 .numbers {
-  width: 240px;
+  width: 255px;
   display: flex;
   flex-wrap: wrap;
+  gap: 5px;
 }
 .operators {
   width: 80px;
 }
 .body {
   display: flex;
+  margin-right: 10px;
 }
 .number {
   height: 100px;
   width: 80px;
+  border-radius: 5px;
 }
 .operator {
   height: 60px;
