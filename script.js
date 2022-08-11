@@ -87,7 +87,7 @@ number9.addEventListener(`click`, () => {
   return displayValue;
 });
 number0.addEventListener(`click`, () => {
-  if (displayValue !== `` || displayValue !== 0) {
+  if (displayValue !== `` && displayValue !== 0) {
     displayValue = displayValue + `0`;
     refreshScreen();
     return displayValue;
@@ -95,7 +95,7 @@ number0.addEventListener(`click`, () => {
 });
 
 dotOperator.addEventListener(`click`, () => {
-  if (displayValue !== ``) {
+  if (displayValue !== `` && !displayValue.includes(`.`)) {
     displayValue = displayValue + `.`;
     refreshScreen();
     return displayValue;
