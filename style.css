@@ -13,9 +13,13 @@
   margin-top: 100px;
 }
 .screen {
+  display: flex;
+  font-size: 30px;
   height: 40px;
   width: 320px;
   border: 1px solid red;
+  justify-content: end;
+  align-items: center;
 }
 .calculator {
   display: flex;
